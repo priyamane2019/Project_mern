@@ -7,10 +7,8 @@ require('../db/conn');
 router.use(cookieParser());
 const User = require("../model/userSchema")
 const authenticate =require("../middleware/Authenticate");
-router.get("/", (req, res) => {
-    res.send("Hello world home from server server router");
-})
-/////Using Promises
+
+///Using Promises
 
 router.post("/register", (req, res) => {
     const { name, email, phone, address, password, cpassword } = req.body;
